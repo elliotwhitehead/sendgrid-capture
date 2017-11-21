@@ -1,11 +1,17 @@
 from flask import Flask, request
+import os, requests
+
 
 app = Flask(__name__)
 
 @app.route("/", methods=['GET','POST'])
 def add_subscriber():
 	if request.method == 'POST':
-		return "eh."
+		url = "https://api.sendgrid.com/v3/contactdb/recipients"
+		header = {'Authorization': "Bearer "+ os.environ['SENDGRID_API_KEY']}
+		data = [{"email": request.form.get("email")}]
+		response = requests.post(url, headers=header, json=data)
+		return response.text
 	else:
 		return '''
 		<div style=\"position:relative; height:90%; width:100%; text-align:center;\">
