@@ -3,6 +3,6 @@
 import requests
 
 url = "http://127.0.0.1:5000/"
-data = {"email": "test@bronze.com"}
-
-requests.post(url, data=data)
+data = {"email": "test@example.com"}
+response = requests.post(url, data=data)
+print(response.text)
