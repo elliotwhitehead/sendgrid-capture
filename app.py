@@ -24,5 +24,5 @@ def add_subscriber():
 		</div>"
 		'''
 
-
-
+if __name__ == "__main__":
+	app.run()
