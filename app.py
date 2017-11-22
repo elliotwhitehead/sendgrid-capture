@@ -21,7 +21,7 @@ def add_subscriber():
 				<br>
 				<img src=\"https://media1.giphy.com/media/10RgsuetO4uDkY/giphy.gif\">
 			</div>
-		</div>"
+		</div>
 		'''
 
 if __name__ == "__main__":
